@@ -1,60 +1,55 @@
-# === Python ===
+# =====================
+# 📁 Project folders
+# =====================
+data/
+models/
+backups/
+logs/
+checkpoints/
+
+# =====================
+# 🧪 Model artifacts
+# =====================
+*.ckpt
+*.pt
+*.h5
+*.pkl
+*.joblib
+*.tflite
+
+# =====================
+# 🔐 Secrets and config
+# =====================
+.env
+*.env
+.env.*
+
+# =====================
+# ⚙️ Python
+# =====================
 __pycache__/
 *.py[cod]
-*.pyo
 *.so
 
-# === Jupyter and notebooks ===
-.ipynb_checkpoints/
-*.ipynb~
+# =====================
+# 🧪 Jupyter
+# =====================
+*.ipynb_checkpoints/
 
-# === Conda and virtual envs ===
-.env/
-.venv/
-env/
-venv/
-*.env
-*.yml
-
-# === Mac & system ===
+# =====================
+# 💻 IDE / OS junk
+# =====================
 .DS_Store
+.vscode/
+.idea/
+*.swp
+*.bak
+*.tmp
 Thumbs.db
 
-# === Streamlit cache ===
-.streamlit/
-
-# === Logs and temp ===
-*.log
-*.tmp
-*.bak
-
-# === Model artifacts ===
-models/
-checkpoints/
-*.pth
-*.pt
-
-# === OneDrive and cloud sync ===
-*.~*
-~$*
-~*.tmp
-*.onedrive
-*.lnk
-OneDriveTemp/
-~*.docx
-~*.xlsx
-
-# === Data files (DO NOT TRACK) ===
-data/
-*.csv
-*.json
-*.xlsx
-*.zip
-*.pkl
-*.npy
-*.h5
-*.db
-
-# === API keys or secrets (if any) ===
-secrets.*
-api_keys.*
+# =====================
+# 📦 Build / dist
+# =====================
+*.egg-info/
+dist/
+build/
