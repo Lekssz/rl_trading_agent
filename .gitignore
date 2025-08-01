@@ -1,0 +1,60 @@
+# === Python ===
+__pycache__/
+*.py[cod]
+*.pyo
+*.so
+
+# === Jupyter and notebooks ===
+.ipynb_checkpoints/
+*.ipynb~
+
+# === Conda and virtual envs ===
+.env/
+.venv/
+env/
+venv/
+*.env
+*.yml
+
+# === Mac & system ===
+.DS_Store
+Thumbs.db
+
+# === Streamlit cache ===
+.streamlit/
+
+# === Logs and temp ===
+*.log
+*.tmp
+*.bak
+
+# === Model artifacts ===
+models/
+checkpoints/
+*.pth
+*.pt
+
+# === OneDrive and cloud sync ===
+*.~*
+~$*
+~*.tmp
+*.onedrive
+*.lnk
+OneDriveTemp/
+~*.docx
+~*.xlsx
+
+# === Data files (DO NOT TRACK) ===
+data/
+*.csv
+*.json
+*.xlsx
+*.zip
+*.pkl
+*.npy
+*.h5
+*.db
+
+# === API keys or secrets (if any) ===
+secrets.*
+api_keys.*
