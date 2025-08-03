@@ -1,0 +1,68 @@
+# 🧾 Project Setup Log
+
+> MSc Data Science Dissertation – Gbemileke Micah  
+> Project: AI-Driven Financial Trading Agent  
+> Repository: https://github.com/<your-username>/AI-Trading-Agent  
+> Start Date: August 03, 2025
+
+---
+
+## ✅ ENVIRONMENT SETUP
+
+| Step | Description | Date | Status |
+|------|-------------|------|--------|
+| 1. | Installed Miniconda (x86_64) | Aug 2, 2025 | ✅ |
+| 2. | Verified `conda --version` | Aug 2, 2025 | ✅ |
+| 3. | Created `environment.yml` with all dependencies | Aug 2, 2025 | ✅ |
+| 4. | Ran `conda env create -f environment.yml` | Aug 2, 2025 | ✅ |
+| 5. | Activated environment `ai-trading-agent` | Aug 2, 2025 | ✅ |
+
+---
+
+## 📂 PROJECT STRUCTURE
+
+| Folder | Purpose |
+|--------|---------|
+| `data/` | Raw and processed data (ignored by Git) |
+| `models/` | Saved models and checkpoints |
+| `code/` | Main logic and RL agent training |
+| `dashboard/` | Streamlit app and visualizations |
+| `docs/` | Proposal, Gantt chart, logs, diagrams |
+| `notebooks/` | Exploratory data analysis (Jupyter) |
+| `ingestion/` | Scripts to fetch OHLCV, tweets, news |
+| `feature_engineering/` | Pattern detection and indicators |
+| `risk_control/` | Fractal volatility and filters |
+| `utils/` | Reusable helpers and config logic |
+| `tests/` | Optional unit tests |
+
+---
+
+## 🔐 ETHICS & LICENSES
+
+| File | Purpose | Status |
+|------|---------|--------|
+| `ETHICS.md` | Ethical protocol, anonymization | ✅ Created |
+| `DATA_LICENSE.md` | API terms and review log | ✅ Created |
+| `LICENSES.md` | 3rd-party software licenses | ✅ Created |
+
+---
+
+## 🔁 GIT & VERSION CONTROL
+
+| Action | Date | Notes |
+|--------|------|-------|
+| Initialized Git repo | Aug 1, 2025 | `git init` |
+| Added `.gitignore` | Aug 1, 2025 | Covers models, data, env, etc. |
+| Committed base structure | Aug 1, 2025 | All folders & placeholder files |
+| Added `.gitkeep` to empty folders | Aug 1, 2025 | Allows structure tracking |
+| Verified gitignore rules using `git check-ignore` | Aug 2, 2025 | ✅ |
+
+---
+
+## 🔖 NOTES / ISSUES
+
+- Miniconda installed using `.sh` installer successfully
+- `conda` wasn't recognized initially — fixed after restarting terminal
+- `.gitignore` setup complete and tested
+- Next step: Start ingestion + OHLCV formatting
+
