@@ -66,3 +66,10 @@
 - `.gitignore` setup complete and tested
 - Next step: Start ingestion + OHLCV formatting
 
+## 📝 Auto Log Entry — 2025-08-03 21:36:06
+
+- [ ] Ran: `conda env create -f environment.yml`
+- [ ] Verified `conda activate ai-trading-agent`
+- [ ] Confirmed folder structure
+- [ ] Checked `.gitignore` with `git check-ignore -v`
+
