@@ -1,0 +1,18 @@
+name: ai-trading-agent
+dependencies:
+  - python=3.9
+  - pip
+  - pip:
+      - torch
+      - torchvision
+      - stable-baselines3
+      - transformers
+      - vaderSentiment
+      - optuna
+      - streamlit
+      - scikit-learn
+      - pandas
+      - numpy
+      - scipy
+      - matplotlib
+      - jupyter

@@ -115,6 +115,8 @@ dependencies:
       - pandas
       - numpy
       - scipy
+      - matplotlib
+      - jupyter
 ```      
 
 
