@@ -10,20 +10,20 @@ This document outlines the data sources used in the AI Trading Agent project and
 ## OANDA (Forex API)
 
 - **Official site**: https://www.oanda.com
-- **Data Used**: EUR/USD OHLCV data (30-minute intervals)
-- **Access**: Free developer/demo account
+- **Data Used**: EUR/USD OHLCV historical Forex market data
+- **Access**: OANDA v20 REST API using a demo account registered with Kingston University email
 - **Terms of Use**: https://www.oanda.com/us-en/legal/
-- **Compliance**: Access is read-only, used within API rate limits, and no account/order data is used.
+- **Compliance**: API access is limited to public market data only (OHLCV and technical indicators). No live trading, order placement, or financial transactions are performed. All credentials (Personal Access Token, Account ID) are stored securely in `.env` files and excluded from version control via `.gitignore`. Usage complies with OANDA’s Terms of Service and Kingston University ethics guidelines.
 
 ---
 
 ## Binance (Crypto API)
 
 - **Official site**: https://www.binance.com
-- **Data Used**: BTC/USD OHLCV and historical trade data
-- **Access**: Public API (with free API key)
+- **Data Used**: BTC/USDT OHLCV historical market data
+- **Access**: Public API (no authentication keys used)
 - **Terms of Use**: https://www.binance.com/en/terms
-- **Compliance**: Only public market data accessed. All data use complies with Binance’s API usage policy.
+- **Compliance**: No API keys, authentication, or private endpoints are used. Only public OHLCV market data is accessed. All data use complies with Binance’s public API usage policy.
 
 ---
 
@@ -92,7 +92,7 @@ All API integrations used comply with respective rate limits, terms of access, a
 
 ## 📅 Data Usage Review Log
 
-- **Last reviewed**: August 1, 2025  
+- **Last reviewed**: August 6, 2025  
 - **Review frequency**: Every 30 days or upon API terms change  
 - **Responsible party**: Gbemileke Micah (MSc Data Science candidate)
 

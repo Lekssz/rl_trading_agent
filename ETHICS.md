@@ -55,10 +55,25 @@ This project uses publicly available and authorized data from:
 
 ## 5. Compliance and Licensing
 
-- All external APIs are used under their public or academic license terms. See `DATA_LICENSE.md` for full details.
+-- All external APIs are used under their public or academic license terms. See `DATA_LICENSE.md` for full details.
+
+### OANDA API Access
+- OANDA demo account registered using **Kingston University email** for academic verification purposes.
+- API access is limited to **public market data** (OHLCV, technical indicators) via the OANDA v20 REST API.
+- No live trading, order placement, or financial transactions are performed.
+- All credentials (Personal Access Token, Account ID) are stored securely in `.env` files, excluded from version control via `.gitignore`.
+- API usage is fully compliant with OANDA's Terms of Service and Kingston University ethics guidelines.
+
+### Binance API Access
+- Binance API is accessed in **public mode** for OHLCV historical cryptocurrency market data.
+- No API keys, authentication, or private account endpoints are used.
+- No account balances, private data, or live trading functions are accessed.
+- API usage is fully compliant with Binance Terms of Service and Kingston University ethics guidelines.
+
 - Third-party libraries (e.g., PyTorch, FinBERT, Stable-Baselines3, Optuna) are open source and documented in `LICENSES.md`.
 - Project code is for **academic research only**.
 - Final license: **MIT (to be confirmed at submission)**
+
 
 
 ---
@@ -83,4 +98,4 @@ All ethical safeguards, data compliance measures, and fallback procedures are do
 
 ---
 
-_Last updated: 1 August 2025_
+_Last updated: 6 August 2025_
