@@ -91,3 +91,13 @@
 **Created on:** August 3, 2025  
 **Published via:** GitHub Desktop (macOS)  
 
+
+## 🛠️ Conda Environment
+
+- [x] Created `environment.yml` file
+- [x] Installed Miniconda
+- [x] Created conda environment from YAML
+- [x] Activated environment and tested installation
+*Created on:** August 3, 2025  
+
+
