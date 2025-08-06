@@ -73,3 +73,21 @@
 - [ ] Confirmed folder structure
 - [ ] Checked `.gitignore` with `git check-ignore -v`
 
+
+---
+
+## 🔗 GitHub Repository Setup
+
+- [x] Initialized Git repository locally (`git init`)
+- [x] Created `.gitignore` and added appropriate rules
+- [x] Added initial project structure and `.gitkeep` files
+- [x] Committed setup files and environment config
+- [x] Installed and used GitHub Desktop app
+- [x] Created a repository on GitHub
+- [x] Published the repository using GitHub Desktop
+- [ ] Verified repository privacy settings
+
+**Repository Name:** `AI-Trading-Agent`  
+**Created on:** August 3, 2025  
+**Published via:** GitHub Desktop (macOS)  
+
