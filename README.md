@@ -36,21 +36,23 @@ Key innovations include:
 
 ## 📁 Project Structure
 
-├── code/ # Core RL training and evaluation logic
-├── configs/ # PPO agent parameters, tuning configs
-├── feature_engineering/ # CNN pattern detection, sentiment scoring
-├── ingestion/ # API scripts (OANDA, Binance, Twitter, NewsAPI)
-├── risk_control/ # Fractal volatility cap, triple-barrier labeling
-├── data/ # Raw and processed data (OneDrive only)
-├── models/ # Saved models and checkpoints
-├── notebooks/ # Exploratory notebooks and results
-├── dashboard/ # Streamlit visualization tool
-├── tests/ # Unit tests (optional)
-├── docs/ # Proposal, Gantt, ethics, diagrams
-├── ETHICS.md # Ethics protocols and audit trails
-├── DATA_LICENSE.md # API and data usage compliance
-├── LICENSES.md # 3rd-party software licenses (WIP)
-├── README.md # This file
+├── code/ # Core RL training and evaluation logic  
+├── code/src/processing/ # Scripts for cleaning and transforming raw OHLCV data into model-ready datasets  
+├── configs/ # PPO agent parameters, tuning configs  
+├── feature_engineering/ # CNN pattern detection, sentiment scoring  
+├── ingestion/ # API scripts (OANDA, Binance, Twitter, NewsAPI)  
+├── risk_control/ # Fractal volatility cap, triple-barrier labeling  
+├── data/ # Raw and processed data (OneDrive only)  
+├── models/ # Saved models and checkpoints  
+├── notebooks/ # Exploratory notebooks and results  
+├── dashboard/ # Streamlit visualization tool  
+├── tests/ # Unit tests (optional)  
+├── docs/ # Proposal, Gantt, ethics, diagrams  
+├── ETHICS.md # Ethics protocols and audit trails  
+├── DATA_LICENSE.md # API and data usage compliance  
+├── LICENSES.md # 3rd-party software licenses (WIP)  
+├── README.md # This file  
+
 
 
 ---
@@ -139,6 +141,8 @@ bash
 Copy code
 python code/train_agent.py
 
+2025-08-06:
+- Added `requests` to environment.yml for API calls (Binance & OANDA ingestion scripts).
 
 
 ✍️ Author
@@ -147,6 +151,10 @@ Programme: MSc Data Science
 Institution: Kingston University London
 Start Date: July 2025
 Expected Submission: October 2025
+
+I used an AI assistant to draft scaffolding for ingestion/cleaning; all code was reviewed, modified, and validated by me.
+
+
 
 **📌Notes
 This project is conducted under academic supervision.

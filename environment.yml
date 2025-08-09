@@ -16,3 +16,4 @@ dependencies:
       - scipy
       - matplotlib
       - jupyter
+      - requests # added for API calls (Binance, OANDA)

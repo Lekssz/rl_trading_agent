@@ -101,3 +101,34 @@
 *Created on:** August 3, 2025  
 
 
+## 📝 Auto Log Entry — 2025-08-06 20:25:18
+
+- [ ] Added requests to environment.yml for API ingestion scripts
+
+## 📝 Auto Log Entry — 2025-08-06 20:30:20
+
+- [ ] Added requests to environment.yml for API ingestion scripts
+
+## 📝 Auto Log Entry — 2025-08-06 21:45:34
+
+- [ ] Downloaded Binance BTCUSDT 30m OHLCV data from 2019–2021 using public API
+
+## 📝 Auto Log Entry — 2025-08-06 22:27:28
+
+- [x] Cleaned Binance BTCUSDT 30m OHLCV data
+  - Converted open_time to UTC timestamp
+  - Removed unused columns
+  - Saved cleaned file to `data/processed/binance_BTCUSDT_30m_clean.csv`
+
+## 📝 Auto Log Entry — 2025-08-09 10:27:41
+
+- [ ] Downloaded OANDA EUR/USD M30 OHLCV data (2019–2021) and saved to data/raw/oanda_EURUSD_M30_2019-2021.csv
+
+## 📝 Auto Log Entry — 2025-08-09 11:04:24
+
+- [ ] Cleaned Binance BTCUSDT 30m OHLCV data and saved to data/processed/binance_BTCUSDT_30m_clean.csv
+
+## 📝 Auto Log Entry — 2025-08-09 11:04:24
+
+- [ ] Cleaned OANDA EUR/USD 30m OHLCV data and saved to data/processed/oanda_EURUSD_M30_clean.csv
+
