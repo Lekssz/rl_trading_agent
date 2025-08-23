@@ -1,0 +1,2 @@
+asset,timesteps,seed,sharpe,max_drawdown,mdd_start,mdd_end,avg_turnover,model_path,timeseries_path
+EURUSD,100000,42,-28.74636370301275,-0.9956079488265914,2019-01-09 07:00:00+00:00,2021-12-31 17:30:00+00:00,0.2976379649330712,data/model/baseline/ppo_baseline_EURUSD.zip,data/model/baseline/ppo_baseline_timeseries_EURUSD.csv
