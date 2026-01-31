@@ -6,7 +6,7 @@ a raw CSV.
 
 Reference:
 OANDA (2024) v20 REST API – Instruments: Candles. Available at:
-https://developer.oanda.com/rest-live-v20/instrument-ep/ (Accessed: 9 August 2025)
+https://developer.oanda.com/rest-live-v20/instrument-ep/ (Accessed: 14 October 2025)
 """
 
 import os
@@ -22,9 +22,9 @@ from dotenv import load_dotenv
 INSTRUMENT  = "EUR_USD"                   # Currency pair to fetch
 GRANULARITY = "M30"                       # Candle size (M1, M5, M15, M30, H1, D)
 START_DATE  = "2019-01-01"                 # Data start date (UTC)
-END_DATE    = "2021-12-31"                 # Data end date (UTC)
+END_DATE    = "2023-12-31"                 # Data end date (UTC)
 PRICE_TYPE  = "M"                          # Mid prices (M = mid, A = ask, B = bid)
-OUT_PATH    = Path("data/raw/oanda_EURUSD_M30_2019-2021.csv")
+OUT_PATH    = Path("data/raw/ohlcv/oanda_EURUSD_M30_2019-2023.csv")
 BASE_URL    = "https://api-fxpractice.oanda.com/v3"
 
 # === PERSONAL PROJECT NOTES ===

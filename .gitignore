@@ -1,55 +1,75 @@
 # =====================
-# 📁 Project folders
-# =====================
-data/
-models/
-backups/
-logs/
-checkpoints/
-
-# =====================
-# 🧪 Model artifacts
-# =====================
-*.ckpt
-*.pt
-*.h5
-*.pkl
-*.joblib
-*.tflite
-
-# =====================
-# 🔐 Secrets and config
-# =====================
-.env
-*.env
-.env.*
-
-# =====================
-# ⚙️ Python
+# 🐍 Python
 # =====================
 __pycache__/
 *.py[cod]
 *.so
 
 # =====================
-# 🧪 Jupyter
+# 🧪 Virtual environments
 # =====================
-*.ipynb_checkpoints/
+venv/
+.venv/
+env/
+ENV/
+
+# =====================
+# 📓 Jupyter
+# =====================
+.ipynb_checkpoints/
 
 # =====================
 # 💻 IDE / OS junk
 # =====================
-.DS_Store
 .vscode/
 .idea/
+.DS_Store
+Thumbs.db
 *.swp
 *.bak
 *.tmp
-Thumbs.db
+
+# =====================
+# 🔐 Environment & secrets
+# =====================
+.env
+.env.*
+.envrc
+secrets.json
+
+# =====================
+# 📊 Data (raw & processed)
+# =====================
+data/
+data_raw/
+processed/
+rl_states/
+
+# =====================
+# 🧪 Models & results
+# =====================
+models/
+results/
+logs/
+checkpoints/
+backups/
+
+# =====================
+# 📦 Large / binary artifacts
+# =====================
+*.parquet
+*.pkl
+*.joblib
+*.h5
+*.pt
+*.ckpt
+*.bin
+*.sqlite3
+*.db
 
 # =====================
 # 📦 Build / dist
 # =====================
-*.egg-info/
-dist/
 build/
+dist/
+*.egg-info/

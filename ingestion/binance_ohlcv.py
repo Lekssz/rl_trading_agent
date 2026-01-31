@@ -1,13 +1,13 @@
 """
 Binance OHLCV Data Ingestion Script
 -----------------------------------
-Downloads BTC/USDT 30-minute candlestick data from Binance for 2019-2021
+Downloads BTC/USDT 30-minute candlestick data from Binance for 2019-2023
 and saves it as a CSV file.
 
 Reference:
 Binance (2023) Kline/Candlestick Data. Available at:
 https://binance-docs.github.io/apidocs/spot/en/#kline-candlestick-data
-(Accessed: 6 August 2025)
+(Accessed: 14 October 2025)
 """
 
 import requests
@@ -20,9 +20,9 @@ import time
 SYMBOL = "BTCUSDT"
 INTERVAL = "30m"
 START_DATE = "2019-01-01"
-END_DATE = "2021-12-31"
+END_DATE = "2023-12-31"
 LIMIT = 1000  # Binance's max candles per call
-RAW_PATH = Path("data/raw/binance_BTCUSDT_30m_2019-2021.csv")
+RAW_PATH = Path("data/raw/ohlcv/binance_BTCUSDT_30m_2019-2023.csv")
 BASE_URL = "https://api.binance.com/api/v3/klines"
 
 # === PERSONAL PROJECT NOTES ===

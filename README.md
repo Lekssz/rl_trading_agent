@@ -1,162 +1,117 @@
-# MSc Data Science Dissertation Project 
-# AI Trading Agent
+# Multi-Modal Reinforcement Learning Trading Agent
 
-**Student:** Gbemileke Micah  
+This repository contains the full experimental artefact for an MSc Data Science dissertation at  
+**Kingston University London**.
+
+The project investigates whether **multi-modal data** (price, news attention, macroeconomic indicators, and CNN-derived price embeddings) improves the performance and stability of a **PPO-based reinforcement learning trading agent** across cryptocurrency (BTCUSD) and foreign exchange (EURUSD) markets.
+
+---
+
+## 📌 Project Scope
+
+- Offline, **simulation-only** reinforcement learning
+- No live trading or real-money execution
+- Historical backtesting using 30-minute OHLCV data
+- Controlled ablation studies, hyperparameter tuning, and robustness evaluation
+- Cross-asset transfer from BTCUSD to EURUSD
+
+---
+
+## 📂 Repository Structure
+
+.
+├── code/ # Data processing, state construction, training, evaluation
+├── data/ # Raw, processed, and RL-ready datasets
+│ └── rl_states/ # Final NumPy state arrays used by the RL environment
+├── models/ # Trained PPO models
+├── results/ # Per-model evaluation metrics and summaries
+├── visualisation/ # Figures used in analysis and dissertation
+├── docs/ # Supporting documentation (see below)
+├── environment.yml # Reproducible Conda environment
+└── README.md # This file
+
+
+---
+
+## 📄 Documentation (`docs/`)
+
+All supporting documentation for ethics, licensing, provenance, and reproducibility is located in:
+
+docs/
+├── project_summary.md # High-level description of the artefact and experiments
+├── project_setup_checklist.md # Reproducibility and setup checklist
+├── ETHICS.md # Ethics and compliance statement
+├── DATA_LICENSE.md # Data source usage and licensing
+└── LICENSES.md # Third-party software licenses
+
+
+---
+
+## 🧠 Method Overview
+
+1. **Data Sources**
+   - Binance (BTCUSDT OHLCV)
+   - OANDA (EURUSD OHLCV)
+   - GDELT V2 GKG (global news event metadata)
+   - Macroeconomic indicators (FRED, Bloomberg – institutional access)
+
+2. **Feature Engineering**
+   - Price-derived indicators
+   - News attention and thematic signals
+   - Macroeconomic context
+   - CNN-based price embeddings and short-horizon direction probability
+
+3. **State Construction**
+   - Unified multi-modal state
+   - Exported as Parquet, then converted to NumPy arrays
+   - NumPy states consumed directly by the RL environment
+
+4. **Reinforcement Learning**
+   - Proximal Policy Optimisation (PPO)
+   - Baseline training and feature ablations (BTC & EUR)
+   - Hyperparameter tuning on BTC only
+   - Cross-asset robustness testing on EUR
+   - Buy-and-Hold benchmark comparison
+
+---
+
+## 📊 Results
+
+- Evaluation metrics (return, Sharpe ratio, drawdown, trading activity) are stored **per model** in:
+results/<model_name>/
+
+- Figures and plots used in the dissertation are stored in:
+visualisation/
+
+
+---
+
+## ⚖️ Ethics and Compliance
+
+- No human subjects
+- No personal or sensitive data
+- No live trading
+- No financial advice
+- All data used under public or institutional academic licenses
+
+See `docs/ETHICS.md` and `docs/DATA_LICENSE.md` for full details.
+
+---
+
+## 🔁 Reproducibility
+
+- Environment specification is provided in `environment.yml`
+- Code, data processing, and evaluation pipelines are modularised
+- Final artefact is reproducible from raw data ingestion to result generation
+
+
+---
+
+## 🎓 Academic Context
+
+This repository accompanies an **experiment-based MSc dissertation** submitted in partial fulfilment of the requirements for the **MSc Data Science** programme at Kingston University London.
+
+---
+
+**Author:** Gbemileke Micah  
 **Student ID:** K2457391  
-**Course:** MSc Data Science  
-**University:** Kingston University London  
-**Project Period:** July – October 2025  
-
-##📘 Project Title  
-**A Fractal-Risk-Aware PPO Multimodal Framework for Cross-Asset Forex and Cryptocurrency Trading**
-
-## 🧠 Project Overview
-
-This project aims to design and implement a reinforcement learning (RL) agent capable of trading across both the **EUR/USD** (Forex) and **BTC/USD** (Cryptocurrency) markets. The system will use:
-
-
-Key innovations include:
-
-## 🧩 Key System Features
-
-- 🤖 **Proximal Policy Optimization (PPO)** – A robust reinforcement learning algorithm chosen for its stability in continuous action spaces  
-- 🧠 **CNN-Validated Pattern Detection** – Detects head-and-shoulders and triangle patterns using finetuned ResNet-18 on candlestick images  
-- 📈 **Technical Indicators** – Integrates order blocks and 200-day moving average confluence filters to align trades with institutional flow  
-- 💬 **Real-Time Sentiment Analysis** – Combines fast VADER scores with FinBERT’s financial-contextual embeddings for high-fidelity market mood  
-- ⚠️ **Fractal Volatility Controls** – Implements Mandelbrot-inspired volatility caps (20-day rolling) to mitigate drawdowns during crisis regimes  
-- 🔄 **Dual-Market Adaptation** – Unified PPO agent architecture capable of switching seamlessly between EUR/USD (Forex) and BTC/USD (Crypto)  
-- 🎯 **Bayesian Optimization + Monte Carlo Stress Testing** – Enhances robustness through hyperparameter tuning and 150-path scenario simulations
-
-> **This is a simulation-based research project.**  
-> **No real-money trading is executed.**
->**The agent will be trained and evaluated using historical data (2019–2021) and benchmarked against vanilla PPO and buy-and-hold baselines.**
-
----
----
-
-## 📁 Project Structure
-
-├── code/ # Core RL training and evaluation logic  
-├── code/src/processing/ # Scripts for cleaning and transforming raw OHLCV data into model-ready datasets  
-├── configs/ # PPO agent parameters, tuning configs  
-├── feature_engineering/ # CNN pattern detection, sentiment scoring  
-├── ingestion/ # API scripts (OANDA, Binance, Twitter, NewsAPI)  
-├── risk_control/ # Fractal volatility cap, triple-barrier labeling  
-├── data/ # Raw and processed data (OneDrive only)  
-├── models/ # Saved models and checkpoints  
-├── notebooks/ # Exploratory notebooks and results  
-├── dashboard/ # Streamlit visualization tool  
-├── tests/ # Unit tests (optional)  
-├── docs/ # Proposal, Gantt, ethics, diagrams  
-├── ETHICS.md # Ethics protocols and audit trails  
-├── DATA_LICENSE.md # API and data usage compliance  
-├── LICENSES.md # 3rd-party software licenses (WIP)  
-├── README.md # This file  
-
-
-
----
-
-## 🧪 Status
-
-🛠️ **Development has not yet started.**  
-This repository is being set up as a secure and trackable environment for code development, literature review, and ethics compliance.
-
----
-
-## 🔐 Ethics & Licensing
-
-- **No live trading or real-money execution** will be performed
-- Tweets will be anonymized (no handles, user IDs, or geolocation)
-- Data is stored securely using **Kingston University OneDrive**
-- Scripts will comply with:
-  - Twitter API v2 Academic
-  - OANDA & Binance Terms of Service
-- Full documentation is in:
-  - `ETHICS.md`
-  - `DATA_LICENSE.md`
-- Proposed code license: **MIT** (pending supervisor confirmation)
-- 📄 Ethics Protocol: [ETHICS.md](./ETHICS.md)
-- 📄 Data Licensing: [DATA_LICENSE.md](./DATA_LICENSE.md)
-
----
-
-## ⚙️ Planned Tech Stack
-
-| Category        | Tools                                    |
-|----------------|-------------------------------------------|
-| Language        | Python 3.9+                              |
-| RL Framework    | Stable-Baselines3 (PPO)                  |
-| Deep Learning   | PyTorch + torchvision                    |
-| Optimization    | Optuna (Bayesian search + pruning)       |
-| Sentiment       | VADER + FinBERT (transformers)           |
-| Visualization   | Jupyter + Streamlit                      |
-| APIs            | OANDA (Forex), Binance (Crypto), Twitter |
-| Risk Modeling   | Fractal volatility cap, triple-barrier   |
-
----
-
-## 📦 Planned Environment (via Conda)
-
-`environment.yml` will include:
-
-```yaml
-name: ai-trading-agent
-dependencies:
-  - python=3.9
-  - pip
-  - pip:
-      - torch
-      - torchvision
-      - stable-baselines3
-      - transformers
-      - vaderSentiment
-      - optuna
-      - streamlit
-      - scikit-learn
-      - pandas
-      - numpy
-      - scipy
-      - matplotlib
-      - jupyter
-```      
-
-
-
-text
-
----
-
-▶️ Planned Execution
-All training scripts will be organized in code/src/
-
-Dashboard interface will run via Streamlit:
-
-bash
-Copy code
-streamlit run dashboard/app.py
-Model training will be triggered via:
-
-bash
-Copy code
-python code/train_agent.py
-
-2025-08-06:
-- Added `requests` to environment.yml for API calls (Binance & OANDA ingestion scripts).
-
-
-✍️ Author
-Name: Gbemileke Micah
-Programme: MSc Data Science
-Institution: Kingston University London
-Start Date: July 2025
-Expected Submission: October 2025
-
-I used an AI assistant to draft scaffolding for ingestion/cleaning; all code was reviewed, modified, and validated by me.
-
-
-
-**📌Notes
-This project is conducted under academic supervision.
-No personal, sensitive, or commercial data will be shared or published.
-All use of APIs and external models complies with applicable licenses and ethical standards.**
