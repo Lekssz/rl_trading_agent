@@ -19,16 +19,8 @@ The project investigates whether **multi-modal data** (price, news attention, ma
 
 ## 📂 Repository Structure
 
-.
-├── code/ # Data processing, state construction, training, evaluation
-├── data/ # Raw, processed, and RL-ready datasets
-│ └── rl_states/ # Final NumPy state arrays used by the RL environment
-├── models/ # Trained PPO models
-├── results/ # Per-model evaluation metrics and summaries
-├── visualisation/ # Figures used in analysis and dissertation
-├── docs/ # Supporting documentation (see below)
-├── environment.yml # Reproducible Conda environment
-└── README.md # This file
+A detailed overview of the project layout is available here:  
+👉 [`Project Structure Overview`](Project%20Structure%20Overview.md)
 
 
 ---
