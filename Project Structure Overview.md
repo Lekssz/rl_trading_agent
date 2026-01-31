@@ -1,6 +1,7 @@
 Project Structure Overview
 
 This document provides an overview of the folder structure of the **Multi-Modal Reinforcement Learning Trading Agent** Below is a description of each folder and its contents:
+```text
     ├── README.md                                    # Overview of the project, usage instructions
     ├── Project_Structure.md                         # Description of the folder structure
     ├── code/                                        # Code files for analysis, training, model, etc.
@@ -35,10 +36,10 @@ This document provides an overview of the folder structure of the **Multi-Modal 
     │   ├── ppo_btc_baseline_ablations_full/         # Contains the results for the trained btc ppo full model 
     │   ├── ppo_btc_baseline_ablations_price/        # Contains the results for the trained btc ppo price only btc model
     │   └── (other results)
-    ├── visualisation/                                # Visualization and figures
-    │   ├── btc_baseline_ablation_figures/
-    │   ├── cross_asset_baseline_vs_buyhold/
-    │   └── (other visualizations)
+    └── visualisation/                                # Visualization and figures
+       ├── btc_baseline_ablation_figures/
+       ├── cross_asset_baseline_vs_buyhold/
+       └── (other visualizations)
 
 
 **Explanation of Key Folders:**
